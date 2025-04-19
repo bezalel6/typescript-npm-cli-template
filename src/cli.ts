@@ -34,3 +34,7 @@ program
   });
 
 program.parse();
+
+// Print out the parsed options
+console.log(chalk.blue('Parsed options:'));
+console.log(program.opts());

@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'node', 'prettier'],
+  plugins: ['@typescript-eslint', 'node',],
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
@@ -12,17 +12,16 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:prettier/recommended',
   ],
   rules: {
-    'prettier/prettier': 'warn',
     'node/no-missing-import': 'off',
     'node/no-empty-function': 'off',
     'node/no-unsupported-features/es-syntax': 'off',
     'node/no-missing-require': 'off',
     'node/shebang': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    'eslint/no-process-exit': 'off',
+    'node/no-process-exit': 'off',
+    'no-process-exit': 'off',
     quotes: ['warn', 'single', { avoidEscape: true }],
     'node/no-unpublished-import': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
@@ -31,5 +30,6 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/restrict-template-expressions': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off'
   },
 };

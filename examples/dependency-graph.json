@@ -1,0 +1,43 @@
+[
+  {
+    "filePath": "examples\\sample-project\\src\\ui.ts",
+    "imports": [
+      "./utils/logger"
+    ]
+  },
+  {
+    "filePath": "examples\\sample-project\\src\\index.ts",
+    "imports": [
+      "./api",
+      "./utils/formatter",
+      "./ui"
+    ]
+  },
+  {
+    "filePath": "examples\\sample-project\\src\\config.ts",
+    "imports": []
+  },
+  {
+    "filePath": "examples\\sample-project\\src\\api.ts",
+    "imports": [
+      "./utils/error",
+      "./config"
+    ]
+  },
+  {
+    "filePath": "examples\\sample-project\\src\\utils\\logger.ts",
+    "imports": []
+  },
+  {
+    "filePath": "examples\\sample-project\\src\\utils\\formatter.ts",
+    "imports": [
+      "./logger"
+    ]
+  },
+  {
+    "filePath": "examples\\sample-project\\src\\utils\\error.ts",
+    "imports": [
+      "./logger"
+    ]
+  }
+]
