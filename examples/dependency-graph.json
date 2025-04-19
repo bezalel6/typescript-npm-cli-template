@@ -1,43 +1,67 @@
-[
-  {
-    "filePath": "examples\\sample-project\\src\\ui.ts",
-    "imports": [
-      "./utils/logger"
-    ]
-  },
-  {
-    "filePath": "examples\\sample-project\\src\\index.ts",
-    "imports": [
-      "./api",
-      "./utils/formatter",
-      "./ui"
-    ]
-  },
-  {
-    "filePath": "examples\\sample-project\\src\\config.ts",
-    "imports": []
-  },
-  {
-    "filePath": "examples\\sample-project\\src\\api.ts",
-    "imports": [
-      "./utils/error",
-      "./config"
-    ]
-  },
-  {
-    "filePath": "examples\\sample-project\\src\\utils\\logger.ts",
-    "imports": []
-  },
-  {
-    "filePath": "examples\\sample-project\\src\\utils\\formatter.ts",
-    "imports": [
-      "./logger"
-    ]
-  },
-  {
-    "filePath": "examples\\sample-project\\src\\utils\\error.ts",
-    "imports": [
-      "./logger"
-    ]
-  }
-]
+{
+  "nodes": [
+    {
+      "id": "examples\\sample-project\\src\\ui.ts"
+    },
+    {
+      "id": "examples\\sample-project\\src\\index.ts"
+    },
+    {
+      "id": "examples\\sample-project\\src\\config.ts"
+    },
+    {
+      "id": "examples\\sample-project\\src\\api.ts"
+    },
+    {
+      "id": "examples\\sample-project\\src\\utils\\logger.ts"
+    },
+    {
+      "id": "examples\\sample-project\\src\\utils\\formatter.ts"
+    },
+    {
+      "id": "examples\\sample-project\\src\\utils\\error.ts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "examples\\sample-project\\src\\ui.ts",
+      "target": "E:\\SharedCo\\dependency-analyzer\\examples\\sample-project\\src\\utils\\logger.ts",
+      "type": "import"
+    },
+    {
+      "source": "examples\\sample-project\\src\\index.ts",
+      "target": "E:\\SharedCo\\dependency-analyzer\\examples\\sample-project\\src\\api.ts",
+      "type": "import"
+    },
+    {
+      "source": "examples\\sample-project\\src\\index.ts",
+      "target": "E:\\SharedCo\\dependency-analyzer\\examples\\sample-project\\src\\utils\\formatter.ts",
+      "type": "import"
+    },
+    {
+      "source": "examples\\sample-project\\src\\index.ts",
+      "target": "E:\\SharedCo\\dependency-analyzer\\examples\\sample-project\\src\\ui.ts",
+      "type": "import"
+    },
+    {
+      "source": "examples\\sample-project\\src\\api.ts",
+      "target": "E:\\SharedCo\\dependency-analyzer\\examples\\sample-project\\src\\utils\\error.ts",
+      "type": "import"
+    },
+    {
+      "source": "examples\\sample-project\\src\\api.ts",
+      "target": "E:\\SharedCo\\dependency-analyzer\\examples\\sample-project\\src\\config.ts",
+      "type": "import"
+    },
+    {
+      "source": "examples\\sample-project\\src\\utils\\formatter.ts",
+      "target": "E:\\SharedCo\\dependency-analyzer\\examples\\sample-project\\src\\utils\\logger.ts",
+      "type": "import"
+    },
+    {
+      "source": "examples\\sample-project\\src\\utils\\error.ts",
+      "target": "E:\\SharedCo\\dependency-analyzer\\examples\\sample-project\\src\\utils\\logger.ts",
+      "type": "import"
+    }
+  ]
+}
