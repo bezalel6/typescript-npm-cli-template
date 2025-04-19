@@ -16,12 +16,11 @@
     "cm": "cz",
     "lint": "eslint ./src/ --fix",
     "start": "TS_NODE_FILES=true ts-node ./src/cli.ts",
-    "prepare": "husky install",
     "semantic-release": "semantic-release",
     "test:watch": "jest --watch",
     "test": "jest",
     "typecheck": "tsc --noEmit",
-    "test:example": "ts-node src/cli.ts --glob \"examples/sample-project/src/**/*.ts\" --language ts --output examples/dependency-graph.json"
+    "test:example": "ts-node src/cli.ts --glob \"examples/sample-project/src/**/*.ts\" --language ts --output examples/graph.html --format html --open"
   },
   "repository": {
     "type": "git",
@@ -51,7 +50,8 @@
   "dependencies": {
     "@typescript-eslint/types": "^5.62.0",
     "commander": "^7.2.0",
-    "glob": "^11.0.1"
+    "glob": "^11.0.1",
+    "open": "^8.4.2"
   },
   "devDependencies": {
     "@ryansonshine/commitizen": "^4.2.8",

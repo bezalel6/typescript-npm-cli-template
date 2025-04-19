@@ -1,25 +1,80 @@
 {
   "nodes": [
     {
-      "id": "examples\\sample-project\\src\\ui.ts"
+      "id": "examples\\sample-project\\src\\ui.ts",
+      "label": "ui.ts",
+      "exports": [
+        "renderUI"
+      ],
+      "calls": [
+        "logger.info",
+        "console.log"
+      ]
     },
     {
-      "id": "examples\\sample-project\\src\\index.ts"
+      "id": "examples\\sample-project\\src\\index.ts",
+      "label": "index.ts",
+      "exports": [],
+      "calls": [
+        "fetchData",
+        "formatData",
+        "renderUI",
+        "main"
+      ]
     },
     {
-      "id": "examples\\sample-project\\src\\config.ts"
+      "id": "examples\\sample-project\\src\\config.ts",
+      "label": "config.ts",
+      "exports": [
+        "config"
+      ],
+      "calls": []
     },
     {
-      "id": "examples\\sample-project\\src\\api.ts"
+      "id": "examples\\sample-project\\src\\api.ts",
+      "label": "api.ts",
+      "exports": [
+        "fetchData"
+      ],
+      "calls": [
+        "fetch",
+        "response.json",
+        "handleError"
+      ]
     },
     {
-      "id": "examples\\sample-project\\src\\utils\\logger.ts"
+      "id": "examples\\sample-project\\src\\utils\\logger.ts",
+      "label": "logger.ts",
+      "exports": [
+        "logger"
+      ],
+      "calls": [
+        "console.debug",
+        "console.info",
+        "console.warn",
+        "console.error"
+      ]
     },
     {
-      "id": "examples\\sample-project\\src\\utils\\formatter.ts"
+      "id": "examples\\sample-project\\src\\utils\\formatter.ts",
+      "label": "formatter.ts",
+      "exports": [
+        "formatData"
+      ],
+      "calls": [
+        "logger.debug"
+      ]
     },
     {
-      "id": "examples\\sample-project\\src\\utils\\error.ts"
+      "id": "examples\\sample-project\\src\\utils\\error.ts",
+      "label": "error.ts",
+      "exports": [
+        "handleError"
+      ],
+      "calls": [
+        "logger.error",
+        "String"
+      ]
     }
   ],
   "edges": [
@@ -62,6 +117,30 @@
       "source": "examples\\sample-project\\src\\utils\\error.ts",
       "target": "E:\\SharedCo\\dependency-analyzer\\examples\\sample-project\\src\\utils\\logger.ts",
       "type": "import"
+    },
+    {
+      "source": "examples\\sample-project\\src\\index.ts",
+      "target": "examples\\sample-project\\src\\api.ts",
+      "type": "call",
+      "label": "fetchData"
+    },
+    {
+      "source": "examples\\sample-project\\src\\index.ts",
+      "target": "examples\\sample-project\\src\\utils\\formatter.ts",
+      "type": "call",
+      "label": "formatData"
+    },
+    {
+      "source": "examples\\sample-project\\src\\index.ts",
+      "target": "examples\\sample-project\\src\\ui.ts",
+      "type": "call",
+      "label": "renderUI"
+    },
+    {
+      "source": "examples\\sample-project\\src\\api.ts",
+      "target": "examples\\sample-project\\src\\utils\\error.ts",
+      "type": "call",
+      "label": "handleError"
     }
   ]
 }

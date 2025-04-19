@@ -20,7 +20,18 @@ program
       return value;
     }
   )
-  .option('-o, --output <file>', 'Output file for the graph (JSON format)')
+  .option('-o, --output <file>', 'Output file for the graph')
+  .option(
+    '-f, --format <format>',
+    'Output format (json, d3, dot, html)',
+    value => {
+      if (!['json', 'd3', 'dot', 'html'].includes(value)) {
+        throw new Error('Format must be one of: json, d3, dot, html');
+      }
+      return value;
+    }
+  )
+  .option('--open', 'Open the HTML visualization in browser (only works with html format)')
   .action(async options => {
     try {
       await analyzeFiles(options);
